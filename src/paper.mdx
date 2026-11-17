@@ -79,7 +79,7 @@ The two action-side encoders are first initialized by **response pretraining**: 
 
 ## Simulated rollouts
 
-### Plug insertion (recovery)
+### Plug insertion
 
 <div class="not-prose mx-auto max-w-5xl grid grid-cols-3 gap-2 md:grid-cols-6">
   <img src="/images/sim/plug-ours-1.png" alt="Start" class="w-full rounded-md" />
@@ -89,9 +89,9 @@ The two action-side encoders are first initialized by **response pretraining**: 
   <img src="/images/sim/plug-ours-5.png" alt="Released" class="w-full rounded-md" />
   <img src="/images/sim/plug-ours-6.png" alt="Done" class="w-full rounded-md" />
 </div>
-<p class="text-sm text-center"><i>CoRA-VTLA: start → first contact → advancing → inserted → released → done.</i></p>
+<p class="text-sm text-center"><i>A plug insertion completed by CoRA-VTLA.</i></p>
 
-### Knob operation (recovery)
+### Knob operation
 
 <div class="not-prose mx-auto max-w-5xl grid grid-cols-3 gap-2 md:grid-cols-6">
   <img src="/images/sim/knob-ours-1.png" alt="Start" class="w-full rounded-md" />
@@ -101,7 +101,7 @@ The two action-side encoders are first initialized by **response pretraining**: 
   <img src="/images/sim/knob-ours-5.png" alt="Released" class="w-full rounded-md" />
   <img src="/images/sim/knob-ours-6.png" alt="Done" class="w-full rounded-md" />
 </div>
-<p class="text-sm text-center"><i>CoRA-VTLA: start → grasp → press and turn → target angle → released → done.</i></p>
+<p class="text-sm text-center"><i>CoRA-VTLA grasps the knob, presses to unlock, and turns it to the target angle.</i></p>
 
 ### Nail insertion
 
@@ -113,7 +113,7 @@ The two action-side encoders are first initialized by **response pretraining**: 
   <img src="/images/sim/nail-ours-5.png" alt="Released" class="w-full rounded-md" />
   <img src="/images/sim/nail-ours-6.png" alt="Done" class="w-full rounded-md" />
 </div>
-<p class="text-sm text-center"><i>CoRA-VTLA: start → first contact → advancing → inserted → released → done.</i></p>
+<p class="text-sm text-center"><i>A nail insertion completed by CoRA-VTLA.</i></p>
 
 ### The signals behind a recovery
 
@@ -124,14 +124,14 @@ The two action-side encoders are first initialized by **response pretraining**: 
 </div>
 <p class="text-sm text-center"><i>A successful plug insertion: fingertip load, wrist wrench, and realized displacement — the responses the memory token reads.</i></p>
 
-**Recovery rollouts (CoRA-VTLA, muted)**
+**Rollouts of CoRA-VTLA**
 
 <div class="not-prose mx-auto max-w-5xl grid grid-cols-1 gap-3 md:grid-cols-3">
   <video src="/videos/sim-plug-recover.mp4" controls muted playsinline preload="metadata" class="w-full rounded-md"></video>
   <video src="/videos/sim-knob-recover.mp4" controls muted playsinline preload="metadata" class="w-full rounded-md"></video>
   <video src="/videos/sim-nail-recover.mp4" controls muted playsinline preload="metadata" class="w-full rounded-md"></video>
 </div>
-<p class="text-sm text-center"><i>Blocked, then recovered: plug insertion · knob operation · nail insertion.</i></p>
+<p class="text-sm text-center"><i>Recovery after blocked contact on plug, knob, and nail insertion.</i></p>
 
 <div class="mx-auto max-w-5xl">
   <Figure>
@@ -142,7 +142,7 @@ The two action-side encoders are first initialized by **response pretraining**: 
 
 ## Real robot
 
-On the real robot, the vision-only baseline keeps pressing after contact is blocked, tilts or drops grasped objects, and trips force limits — while CoRA-VTLA registers the load response, adjusts, and completes the task. All clips are muted.
+On the real robot, the vision-only baseline keeps pressing after contact is blocked, tilts or drops grasped objects, and trips force limits — while CoRA-VTLA registers the load response, adjusts, and completes the task.
 
 **Vision-only baseline (failures)**
 
@@ -229,7 +229,7 @@ On the real robot, the vision-only baseline keeps pressing after contact is bloc
 
 <div class="mx-auto max-w-5xl">
   <video src="/videos/univtac-recover.mp4" controls muted playsinline preload="metadata" class="w-full rounded-md"></video>
-  <p class="text-sm text-center"><i>CoRA-VTLA on UniVTAC Insert Tube with optical tactile sensing (muted).</i></p>
+  <p class="text-sm text-center"><i>CoRA-VTLA on UniVTAC Insert Tube with optical tactile sensing.</i></p>
 </div>
 
 ## Citation
